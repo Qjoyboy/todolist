@@ -1,0 +1,8 @@
+doc/**/*.txt
+/db/*.sqlite3
+/coverage/
+node_modules/
+access.log
+*.log
+*.рус
+.env
