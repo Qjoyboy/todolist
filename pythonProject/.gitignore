@@ -6,3 +6,5 @@ access.log
 *.log
 *.рус
 .env
+.idea
+/venv/
