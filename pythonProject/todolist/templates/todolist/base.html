@@ -1,0 +1,10 @@
+{% load static %}
+<div id="heading">
+    <h1>Todolist</h1>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <a class="btn" href="{% url 'todolist:create' %}">Создать задание</a>
+</div>
+<div class="cards">
+    {% block content %}
+    {% endblock %}
+</div>

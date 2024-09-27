@@ -1,0 +1,22 @@
+
+{% extends 'todolist/base.html' %}
+
+{% block content %}
+{% if latest_quest_list %}
+    {% for quest in latest_quest_list%}
+        <div class="card">
+            <div class="col-6">
+                <div class="row">
+                <div class="card-title"> {{ quest.title }}</div>
+                <div class="card-desc"> {{ quest.description }}</div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endif %}
+{% endblock %}
+<!--    <h1> {{ quest.title }} </h1>-->
+<!--    <h4> {{ quest.description }}</h4>-->
+<!--    <h4> {{ quest.pub_date }}</h4>-->
+<!--    <li><a href="{% url 'todolist:detail' quest.id %}">Подробнее</a></li>-->
