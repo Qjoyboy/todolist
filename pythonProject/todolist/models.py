@@ -4,6 +4,7 @@ class Quest(models.Model):
     title = models.CharField(max_length=150)
     description = models.CharField(max_length=500)
     pub_date = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'Задание'

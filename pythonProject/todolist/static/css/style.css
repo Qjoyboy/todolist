@@ -1,7 +1,7 @@
-a.btn {
+a.prime {
   display: inline-block;
   background: #2196f3;
-  color: #fff;
+  color: #qqq;
   padding: 12px;
   border-radius: 3px;
   text-decoration: none;
@@ -9,6 +9,21 @@ a.btn {
   font-size: 18px;
   line-height: 1;
   font-weight: 100;
+  margin-bottom: 5px;
+}
+
+a.btn {
+  display: inline-block;
+  background: #2196f3;
+  color: #qqq;
+  padding: 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+  margin-bottom: 5px;
 }
 
 body {
@@ -19,9 +34,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: left;
-  border: 1px solid #ccc;
-  padding: 6px;
+  border: 2px solid #ccc;
+  padding: 4px;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .card-title {
@@ -34,3 +50,10 @@ body {
   font-size: 14px;
   margin-bottom: 16px;
 }
+
+.row {
+  height: 80px;
+  width: 500px;
+  margin-bottom: 12px;
+}
+
