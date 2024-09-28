@@ -1,0 +1,10 @@
+{% load static %}
+<div id="heading">
+    <h1>Todolist</h1>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</div>
+<div class="cards">
+    {% block content %}
+    {% endblock %}
+</div>

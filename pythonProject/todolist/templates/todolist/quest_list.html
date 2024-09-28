@@ -1,0 +1,29 @@
+{% extends 'todolist/base.html' %}
+
+{% block content %}
+    <a class="btn" href="{% url 'todolist:create' %}">Создать задание</a>
+{% if latest_quest_list %}
+    {% for quest in latest_quest_list%}
+        <div class="card">
+            <div class="col-6">
+                <div class="row">
+                    <div class="card-title"> {{ quest.id }} - {{ quest.title }}</div>
+                    <div class="card-desc"> {{ quest.description }}</div>
+                    {% if not quest.is_active %}
+                    <a href="{% url 'todolist:quest_activity' quest.id %}" >Не завершено</a>
+                    {% else %}
+                    <a href="{% url 'todolist:quest_activity' quest.id %}">Завершено</a>
+                    {% endif %}
+                    <a href="{% url 'todolist:detail' quest.id %}">Подробнее</a>
+                    <a href="{% url 'todolist:update' quest.id %}">Редактировать</a>
+                    <a href="{% url 'todolist:delete' quest.id %}">Удалить</a>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endif %}
+{% endblock %}
+<!--    <h1> {{ quest.title }} </h1>-->
+<!--    <h4> {{ quest.description }}</h4>-->
+<!--    <h4> {{ quest.pub_date }}</h4>-->

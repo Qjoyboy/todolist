@@ -1,0 +1,7 @@
+
+<form method="post">
+    {% csrf_token %}
+    <p>Хотите удалить задание {{ quest.id }} - {{ quest.title }}</p>
+    <button type="submit" class="btn">Подтвердить</button>
+    <a href="{% url 'todolist:index' %}">Отмена</a>
+</form>
