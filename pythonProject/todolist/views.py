@@ -30,6 +30,10 @@ class QuestDeleteView(DeleteView):
     model = Quest
     success_url = reverse_lazy('todolist:index')
 
+
+"""Документация"""
+
+
 def quest_activity(request, pk):
     quest_item = get_object_or_404(Quest, pk=pk)
     if not quest_item.is_active:
